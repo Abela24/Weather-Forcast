@@ -8,25 +8,66 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="./weather.css">
 </head>
+<body>
 <div class="container">
     <div class="title">Weather forcast</div>
     
 </div>
 
-<h1 class = "Search">Search For City</h1>
+<h1 class = "Search">Search</h1>
 <input type="search" placeholder="Search" id="inputcity">
 <button id="searchbutton" class="button"></button>
+<div>
+  
+</div>
  <div class="Citties">
-    <button class="city">toronto</button>
-    <button class="city">toronto</button>
-    <button class="city">toronto</button>
-    <button class="city">toronto</button>
-    <button class="city">toronto</button>
-    <button class="city">toronto</button>
-    <button class="city">toronto</button>
-    <button class="city">toronto</button>
+    <button class="city">Toronto</button>
+    <button class="city">Tokyo</button>
+    <button class="city">London</button>
+    <button class="city">Paris</button>
+    <button class="city">New York</button>
+    <button class="city">Dubai</button>
+    <button class="city">Rome</button>
+    <button class="city">Madrid</button>
  </div>
-<body>
+
+ <div class="daily">
+
+    <h1 id="cityName"></h1>
+    <p >Temp: <span id="currentTemp"></span></p>
+    <p >Wind: <span id="currentwind"></p>
+    <p >Huminity: <span id="currenthuminity"></p>
+
+
+        <h1 id="dateText"></h1>
+    <p >Temp: <span id="day-1-Temp"></p>
+    <p >Wind: <span id="day-1-windwind"></p>
+    <p >Huminity: <span id="day-1-huminity"></p>
+
+
+        <h1 id="dateText"></h1>
+        <p >Temp: <span id="day-2-Temp"></p>
+        <p  >Wind: <span id="day-2-windwind"></p>
+        <p  >Huminity: <span id="day-2-huminity"></p>
+
+        
+            <h1 id="dateText"></h1>
+            <p>Temp: <span  id="day-3-Temp"></p>
+            <p >Wind: <span id="day-3-windwind"></p>
+            <p >Huminity: <span id="day-3-huminity"></p>
+
+            
+                <h1 id="dateText"></h1>
+                <p >Temp: <span id="day-4-Temp"></p>
+                <p >Wind: <span id="day-4-windwind"></p>
+                <p >Huminity: <span id="day-4-huminity"></p>
+
+                    <h1 id="dateText"></h1>
+                    <p >Temp: <span id="day-5-Temp"></p>
+                    <p >Wind: <span id="day-5-windwind"></p>
+                    <p >Huminity: <span id="day-5-huminity"></p>
+ </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="weather.js"></script>
     
 </body>
