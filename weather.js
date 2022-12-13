@@ -18,7 +18,7 @@ searchBtn.click(function(){
    
     
 function getlocation(City) {
-    console.log(City)
+    console.log(City)//calling api 
     fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + City + "&appid=" + APIkey )
     .then(response => response.json())
 	.then(data =>{
@@ -61,7 +61,10 @@ function getweather(lon, lat){
         currentwind.text(data.list[0].wind.speed)
 
         var currentHumidity = $("#currenthuminity")
-        currentHumidity.text(data.list[0].main.huminity)
+        currentHumidity.text(data.list[0].main.humidity)
+
+        var currenticon = $("#icon")
+        currenticon.text(data.list[0].weather[0].id)
 
         //Day 1 weather forecast
 
@@ -74,7 +77,7 @@ function getweather(lon, lat){
         day1wind.text(data.list[1].wind.speed)
 
         var day1Humidity = $("#day-1-huminity")
-        day1Humidity.text(data.list[1].main.huminity)
+        day1Humidity.text(data.list[1].main.humidity)
 
         //Day-2 forecast
         var day2Temp = $("#day-2-Temp")
@@ -84,7 +87,7 @@ function getweather(lon, lat){
         day2wind.text(data.list[2].wind.speed)
 
         var day2Humidity = $("#day-2-huminity")
-        day2Humidity.text(data.list[2].main.huminity)
+        day2Humidity.text(data.list[2].main.humidity)
 
 
         //day 3
@@ -96,7 +99,7 @@ function getweather(lon, lat){
         day3wind.text(data.list[3].wind.speed)
 
         var day3Humidity = $("#day-3-huminity")
-        day3Humidity.text(data.list[3].main.huminity)
+        day3Humidity.text(data.list[3].main.humidity)
 
         //day 4
 
@@ -107,7 +110,7 @@ function getweather(lon, lat){
         day4wind.text(data.list[4].wind.speed)
 
         var day4Humidity = $("#day-4-huminity")
-        day4Humidity.text(data.list[4].main.huminity)
+        day4Humidity.text(data.list[4].main.humidity)
 
             //day5
 
@@ -118,7 +121,7 @@ function getweather(lon, lat){
         day5wind.text(data.list[5].wind.speed)
 
         var day5Humidity = $("#day-5-huminity")
-        day5Humidity.text(data.list[5].main.huminity)
+        day5Humidity.text(data.list[5].main.humidity)
         
     })
 }

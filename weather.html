@@ -13,7 +13,8 @@
     <div class="title">Weather forcast</div>
     
 </div>
-
+<div class="main">
+<div>
 <h1 class = "Search">Search</h1>
 <input type="search" placeholder="Search" id="inputcity">
 <button id="searchbutton" class="button"></button>
@@ -30,42 +31,46 @@
     <button class="city">Rome</button>
     <button class="city">Madrid</button>
  </div>
-
- <div class="daily">
+</div>
+ <div class="current">
 
     <h1 id="cityName"></h1>
     <p >Temp: <span id="currentTemp"></span></p>
     <p >Wind: <span id="currentwind"></p>
     <p >Huminity: <span id="currenthuminity"></p>
+        <p id="icon"></p>
+    </div>
+</div>
+        <div class = "daily">
 
-
-        <h1 id="dateText"></h1>
+        <div class="forecast"><h1 id="dateText" class="one"></h1>
     <p >Temp: <span id="day-1-Temp"></p>
-    <p >Wind: <span id="day-1-windwind"></p>
+    <p >Wind: <span id="day-1-wind"></p>
     <p >Huminity: <span id="day-1-huminity"></p>
+    </div>
 
-
-        <h1 id="dateText"></h1>
+    <div class="forecast"> <h1 id="dateText" class="two"></h1>
         <p >Temp: <span id="day-2-Temp"></p>
-        <p  >Wind: <span id="day-2-windwind"></p>
+        <p  >Wind: <span id="day-2-wind"></p>
         <p  >Huminity: <span id="day-2-huminity"></p>
-
+            </div>
         
-            <h1 id="dateText"></h1>
+            <div class="forecast"> <h1 id="dateText"></h1>
             <p>Temp: <span  id="day-3-Temp"></p>
-            <p >Wind: <span id="day-3-windwind"></p>
+            <p >Wind: <span id="day-3-wind"></p>
             <p >Huminity: <span id="day-3-huminity"></p>
-
+                </div>
             
-                <h1 id="dateText"></h1>
+                <div class="forecast"><h1 id="dateText"></h1>
                 <p >Temp: <span id="day-4-Temp"></p>
-                <p >Wind: <span id="day-4-windwind"></p>
+                <p >Wind: <span id="day-4-wind"></p>
                 <p >Huminity: <span id="day-4-huminity"></p>
-
-                    <h1 id="dateText"></h1>
+                    </div>
+                    <div class="forecast"><h1 id="dateText"></h1>
                     <p >Temp: <span id="day-5-Temp"></p>
-                    <p >Wind: <span id="day-5-windwind"></p>
+                    <p >Wind: <span id="day-5-wind"></p>
                     <p >Huminity: <span id="day-5-huminity"></p>
+                        </div>
  </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="weather.js"></script>

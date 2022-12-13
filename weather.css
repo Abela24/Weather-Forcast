@@ -39,7 +39,7 @@ body{
     display:flex;
     flex-direction: column;
     margin-top:50px;
-    width: 60px;
+    width: 80px;
     justify-content: center;
     font-size: medium;
     margin-bottom: 6px;
@@ -53,11 +53,45 @@ body{
 }
 
 .daily{
-    justify-content: center;
     align-items: center;
     display:flex;
     border: soild 10px black;
-    justify-content: space-between;
-    background-color: aqua;
+    justify-content:center;
 }
 
+#cityName{
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.one{
+   flex-direction: row;
+   background-color: lightskyblue;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.current{
+    width: 70%;
+    justify-content: center;
+    background-color: lightblue;
+    padding-left: 45px;
+    padding-top: 50px;
+    border-radius: 10px;
+    margin-right: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.forecast{
+    background-color: aqua;
+    width: 200px;
+    margin-left: 30px;
+    padding-left: 20px;
+    border-radius: 20px;
+}
