@@ -10,10 +10,27 @@ searchBtn.click(function(){
     console.log("button was clicked");
     var City = inputCity.val();
     console.log(City)
+
+    var previouscities = JSON.parse(localStorage.getItem("savedcities")) || []
+    previouscities.push(City)
+    localStorage.setItem("savedcities", JSON.stringify(previouscities))
     getlocation(City)
 })
 
+var savedcities = JSON.parse(localStorage.getItem("savedcities")) || [];
+console.log (savedcities)
+for (var i = 0; i < savedcities.length; i++) {
+    var city = savedcities[i];
+        var citynameEL = document.createElement("button");
+        citynameEL.setAttribute("type", "button")
+        citynameEL.setAttribute("data-search", savedcities[i])
+        citynameEL.textContent = savedcities[i]
+    var citycontainer = document.getElementById("Citties");
+    citycontainer.append(citynameEL)
 
+        
+    
+}
     
    
     
@@ -62,6 +79,7 @@ function getweather(lon, lat){
 
         var currentHumidity = $("#currenthuminity")
         currentHumidity.text(data.list[0].main.humidity)
+        var currenticon =  document.querySelector("#icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
 
         var currenticon = $("#icon")
         currenticon.text(data.list[0].weather[0].id)
@@ -122,14 +140,22 @@ function getweather(lon, lat){
 
         var day5Humidity = $("#day-5-huminity")
         day5Humidity.text(data.list[5].main.humidity)
+
+//city
+
+// var toronto = $("#toronto")
+// toronto.
+
+
         
     })
 }
 
-// //var currentTempEl = $("#todaytemp");
+
+//var currentTempEl = $("#todaytemp");
 // currentTempEl.text(data.current.temp);
 // var currentWindEl = $("#todaywind");
-//     currentWindEl.text(data.current.wind_speed);
+// currentWindEl.text(data.current.wind_speed);
 // var currentHumidityEl = $("#todayhumidity");
-//     currentHumidityEl.text(data.current.humidity);
+// currentHumidityEl.text(data.current.humidity);
 
